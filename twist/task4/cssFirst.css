@@ -1,39 +1,86 @@
 
     body{
         direction: rtl;
-        background-color: rgb(229, 229, 229);
-        margin: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(210, 180, 140);
+        color: darkolivegreen;
+        margin: 0;
         font-size: 150%;
         font-family: Arial, Helvetica, sans-serif;
 
+
     }
     header{
-        background-color: rgba(203, 95, 0, 0.861);
+        background-color: rgba(212, 172, 137, 0.861);
         text-align: center;
-        padding-bottom: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        border: 1px dashed #3b2b2b;
+        width: 100%;
 
 
     }
     h1{
-        color: rgb(181, 31, 31)
-
+        color:#b57530;
     }
-    nav{
+    nav a {
+        text-decoration: none;
         font-variant: small-caps;	
         font-size: 150%;
+        margin: 0 10px;
+        color: #65411b;
+    }
+
+    nav a:hover{
+        background-color: beige;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .content-wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 5%;
+    }
+    .column {
+
+        flex: 1;
+        background-color: #faf2eb;
+        padding: 15px;
+        border: 1px;
+        text-align: center;
     }
 
     h2{
-        color: #666666;
-        background: #BBBBBB;
+
+        color: #b36614
+        background:#b57530;
+        padding: 15px;
+        margin: 0 auto 15px auto;
+        border: 2px solid rgb(19, 89, 35);
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); ;
+        
     }
 
     section{
-        display:inline-block;
-        width:30%;
+       
+        flex:1;
+        padding: 15px;
+        background-color:#efd9c2;
+        display: inline-block;
+        width: 23%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         margin-right: 2%;
-        float: right;
+        margin-left: 2%;
+        border: 5px dashed #3b2b2b;
+       
+
+
     }
+    
 
     summary{
         font-style: normal;
@@ -49,7 +96,7 @@
         clear: both;
     }
     progress {
-        background: #ff0000;
+        background: #1473a2;
     }
     
     progress::-webkit-progress-bar {
