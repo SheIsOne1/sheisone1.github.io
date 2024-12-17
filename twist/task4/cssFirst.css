@@ -16,16 +16,53 @@
     }
     h1{
         color: rgb(181, 31, 31)
-        font-style:italic;
-
-    
-
 
     }
     nav{
-        font-variant: small-caps;
-        font-size: 100%;
-
+        font-variant: small-caps;	
+        font-size: 150%;
     }
+
+    h2{
+        color: #666666;
+        background: #BBBBBB;
+    }
+
+    section{
+        display:inline-block;
+        width:30%;
+        margin-right: 2%;
+        float: right;
+    }
+
+    summary{
+        font-style: normal;
+    }
+
+    details{
+        font-style: italic;
+    }
+
+    footer{
+        background: #BBBBBB;
+        height:100px;
+        clear: both;
+    }
+    progress {
+        background: #ff0000;
+    }
+    
+    progress::-webkit-progress-bar {
+        background-color: #BBBBBB;	
+    }
+    
+    progress::-webkit-progress-value {
+        background-color: #666666 !important;
+    } 
+    progress::-moz-progress-bar {
+        background-color: #666666 !important;
+    }
+
+
     
 
