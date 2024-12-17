@@ -3,7 +3,7 @@
         direction: rtl;
         display: flex;
         flex-wrap: wrap;
-        background-color:#F5F3E7;
+        background-color:#eae8da;
         color: #3B2F2F;
         margin: 0;
         font-size: 150%;
@@ -19,7 +19,6 @@
         border-bottom: 3px solid #B68D40;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         width: 100%;
-
 
     }
     h1{
@@ -83,8 +82,6 @@
         text-align: center;
     }
 
-
-    
     section a {
         text-decoration: none;
         color: #B68D40;
@@ -110,8 +107,6 @@
 
     }
  
-    
-
     section.css-column{
 
         border: 5px solid #B68D40; 
