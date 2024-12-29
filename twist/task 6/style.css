@@ -53,3 +53,48 @@ body {
         filter: brightness(1);
     }
 }
+.line {
+    position: relative;
+    left: 50%;
+    transform: translateX(-30%);
+    top: 70px;
+    width: 100%;
+    font-size: 3.5rem;
+    color: #daffd8df;
+    text-shadow: 
+        2px 2px 5px rgba(255, 221, 53, 0.542),
+        -2px -2px 15px rgba(151, 213, 149, 0.3);
+    opacity: 0;
+    transform-style: preserve-3d;
+    animation: 
+        titleReveal 2s ease-out forwards,
+        floatTitle 3s ease-in-out infinite 2s;
+}
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        top: 50vh;
+        transform: translateX(-50%) translateY(-50%);
+        letter-spacing: -10%;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-30%) translateY(0);
+        letter-spacing: 0%;
+    }
+}
+
+@keyframes floatTitle {
+    0%, 100% {
+        transform: translateX(-30%) translateY(0);
+        text-shadow: 
+            2px 2px 5px rgba(255, 221, 53, 0.542),
+            -2px -2px 15px rgba(151, 213, 149, 0.3);
+    }
+    50% {
+        transform: translateX(-30%) translateY(-10px);
+        text-shadow: 
+            4px 4px 10px rgba(255, 221, 53, 0.742),
+            -4px -4px 20px rgba(151, 213, 149, 0.5);
+    }
+}
