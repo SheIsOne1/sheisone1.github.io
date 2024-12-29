@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     margin: 0;
     padding: 0;
@@ -18,7 +18,6 @@ body {
     perspective: 1000px;
 }
 
-/* Background Animation */
 .background {
     position: absolute;
     margin-top: 0;
@@ -56,7 +55,6 @@ body {
     }
 }
 
-/* Title Styles and Animation */
 .line {
     position: relative;
     left: 50%;
@@ -104,7 +102,6 @@ body {
     }
 }
 
-/* Poem Container */
 .poem-container {
     width: 100%;
     display: flex;
@@ -114,7 +111,6 @@ body {
     margin-top: 2rem;
 }
 
-/* Stanza Line Base Styles */
 .stanza-line {
     font-size: 2.2rem;
     font-weight: 600;
@@ -124,7 +120,6 @@ body {
     transition: all 2s ease;
 }
 
-/* Special First Line Animation */
 .line-1 {
     color: #ffd700;
     text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
@@ -177,7 +172,6 @@ body {
     }
 }
 
-/* Line 2 Animation */
 .line-2 {
     color: #ffe74a;
     text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
