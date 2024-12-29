@@ -1,0 +1,55 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #080707;
+    overflow: hidden;
+}
+
+.scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.background {
+    position: absolute;
+    margin-top: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, 
+        #060605 10%,
+        #1a2f19 40%,
+        #97d595df 100%);
+    animation: moveBackground 20s infinite;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+@keyframes moveBackground {
+    0% {
+        transform: translate(-10%, -10%) scale(1) rotateX(5deg);
+        filter: brightness(1);
+    }
+    25% {
+        transform: translate(5%, 5%) scale(1.1) rotateX(-5deg);
+        filter: brightness(1.2);
+    }
+    50% {
+        transform: translate(-5%, 10%) scale(1.2) rotateX(5deg);
+        filter: brightness(1);
+    }
+    75% {
+        transform: translate(10%, -5%) scale(1.1) rotateX(-5deg);
+        filter: brightness(0.8);
+    }
+    100% {
+        transform: translate(-10%, -10%) scale(1) rotateX(5deg);
+        filter: brightness(1);
+    }
+}
