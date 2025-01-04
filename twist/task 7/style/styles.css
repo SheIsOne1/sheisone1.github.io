@@ -23,8 +23,15 @@ body {
     top: 40px; /* Initial top position */
     left: 50px; /* Initial left position */
     /*transform: translate(-50%, -50%);*/
- 
+  
 }
 
 
-
+@keyframes walkAnimation {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -500px; /* מספר הצעדים באנימציה */
+    }
+}
