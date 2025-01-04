@@ -4,15 +4,16 @@ function sayHi () {
 function logHi () {
     console.log ("Hello there!");  
 }
-function divClicked(){
-    alert ("movediv");
-}
 
-function moveDorothy() {
+
+function moveDorothy(){
     const dorothy =document.getElementById ('dorothy');
     dorothy.style.left = '300px';  
     dorothy.style.top = '400px';  
 
-
 }
+   
+
+
+
 
