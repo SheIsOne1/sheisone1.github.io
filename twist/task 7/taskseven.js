@@ -4,6 +4,9 @@ function sayHi () {
 function logHi () {
     console.log ("Hello there!");  
 }
+function divClicked(){
+    alert ("movediv");
+}
 
 function moveDorothy() {
     const dorothy =document.getElementById ('dorothy');
