@@ -7,7 +7,7 @@ body {
     width: 50px;
     height: 80px;
  /*  Taken from here: http://openbookproject.net/thinkcs/python/english3e/_images/duke_spritesheet.png*/ 
-    background: url('duke_spritesheet.png') 0 0;
+    background: url('./style/duke_spritesheet.png') 0 0;
     position: absolute;
     top: 40px; /* Initial top position */
     left: 50px; /* Initial left position */
