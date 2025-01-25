@@ -1,149 +1,36 @@
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    body{
-        direction: rtl;
-        display: flex;
-        flex-wrap: wrap;
-        background-color:#eae8da;
-        color: #3B2F2F;
-        margin: 0;
-        font-size: 150%;
-        font-family: Arial, Helvetica, sans-serif;
+.color-box {
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
 
-
-    }
-    header{
-        background-color:#EDE0D4;
-        text-align: center;
-        padding: 20px 0;
-        margin-bottom: 30px;
-        border-bottom: 3px solid #B68D40;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 100%;
-
-    }
-    h1{
-        color:#3B2F2F;
-        font-style: italic;
-        font-size: 200%;
-    }
-    nav a {
-        text-decoration: none;
-        font-variant: small-caps;	
-        font-size: 150%;
-        margin: 0 10px;
-        transition: color 0.3s, background-color 0.3s;
-        color: #65411b;
-    }
-
-    nav a:hover{
-        background-color:#B68D40;
-        color: #FFFFFF;
-        padding: 5px;
-        border-radius: 5px;
-    }
-    .content-wrapper{
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 0 5%;
-    }
-    .column {
-
-        flex: 1;
-        background-color: #faf2eb;
-        padding: 15px;
-        border: 1px dashed #65411b;
-        text-align: center;
-    }
-
-    h2{
-
-        color: #b36614;
-        padding: 15px;
-        margin: 0 auto 15px auto;
-        border: 2px solid #654321;
-
-        border-radius: 8px;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); ;
-        
-    }
-
-    section{
-       
-        flex:1;
-        background-color: #3B2F2F; 
-        color: #F5F3E7; 
-        padding: 20px;
-        margin: 10px;
-        border: 2px solid #654321; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        text-align: center;
-    }
-
-    section a {
-        text-decoration: none;
-        color: #B68D40;
-        font-weight: bold;
-        transition: color 0.3s, background-color 0.3;
-
-    }
-    section h2 {
-        color: #EDE0D4; 
-        background-color: #B68D40;
-        border-bottom: 3px solid #654321;
-        border-radius: 10px 10px 0 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        margin-bottom: 15px;
-        
-    }
-    section a:hover{
-        background-color: #B68D40;
-        color: #3B2F2F;
-        padding: 3px 8px;
-        border-radius: 3px;
-        transform: scale(0.95);
-
-    }
- 
-    section.css-column{
-
-        border: 5px solid #B68D40; 
-        padding: 40px; 
-        background-color: #F5F3E7; 
-        color: #3B2F2F; 
-        text-align: center;
-        border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    }
-    
-
-    section ul li::marker {
-        content: "○"; /* עיגול ריק ייחודי */
-        color: #B68D40; /* צבע קרמל */
-        font-size: 1.2em; /* גודל גדול יותר */
-    }
-
-    .css-box {
-        background-color: #3B2F2F; 
-        color: #F5F3E7; 
-        border: 5px solid #cbb5a0; 
-        border-radius: 10px; 
-        padding: 40px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        margin-top: 15px; 
-        text-align: center; 
-    }
-
-    footer{
-        background: #BBBBBB;
-        height:100px;
-        clear: both;
-    }
-
-
-
+/* Color Boxes */
+.flame-scarlet { background-color: #FF2D20; }
+.saffron { background-color: #FFA500; }
+.classic-blue { background-color: #002E5D; }
+.biscay-green { background-color: #00C4B3; }
+.chive { background-color: #3C4A1D; }
+.faded-denim { background-color: #6F8FAF; }
+.orange-peel { background-color: #FF9F1C; }
+.mosaic-blue { background-color: #00758F; }
+.sunlight { background-color: #FFE5B4; }
+.coral-pink { background-color: #FF8C94; }
+.cinnamon-stick { background-color: #8B2500; }
+.grape-compote { background-color: #4B0082; }
 
 
     
