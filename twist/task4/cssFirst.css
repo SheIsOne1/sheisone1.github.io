@@ -1,3 +1,39 @@
+
+header {
+
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-family: 'Shadows Into Light', cursive;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+
+.header-title {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    color:#002E5D;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    color: rgb(111, 107, 107);
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
 .color-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14,8 +50,8 @@
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 10px;
-    color: #333;
-    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 /* Color Boxes */
