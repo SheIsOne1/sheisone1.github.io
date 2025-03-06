@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Word Puzzle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      /* Background image set to a library scene */
+      background: url('https://source.unsplash.com/1600x900/?library') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 50px auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      border: 2px solid #333;
+      border-radius: 4px;
+      font-size: 1em;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Library Word Puzzle</h1>
+    <p>You find yourself in a quiet, mysterious library. An ancient tome reveals a riddle:</p>
+    <p><em>"Unscramble the letters to reveal the essence of wisdom: NOLGEDKE."</em></p>
+    <input type="text" id="userInput" placeholder="Enter your answer here">
+    <br>
+    <button onclick="checkAnswer()">Submit Answer</button>
+    <p id="message"></p>
+  </div>
+  
+  <script>
+    function checkAnswer() {
+      const userInput = document.getElementById('userInput').value.toLowerCase().trim();
+      // The correct answer for the puzzle is "knowledge"
+      const correctAnswer = "knowledge";
+      const messageElement = document.getElementById('message');
+      
+      if (userInput === correctAnswer) {
+        messageElement.style.color = "green";
+        messageElement.textContent = "Correct! You have unlocked the secrets of the library.";
+      } else {
+        messageElement.style.color = "red";
+        messageElement.textContent = "Incorrect. The ancient tome remains closed. Try again!";
+      }
+    }
+  </script>
+</body>
+</html>
