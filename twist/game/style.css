@@ -1,0 +1,120 @@
+/* Overall page styling with an apocalyptic, low-poly vibe */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: url('https://source.unsplash.com/1600x900/?apocalypse,ruins') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  .title {
+    text-align: center;
+    color: #f0f0f0;
+    margin: 0;
+  }
+  
+  .narrative {
+    text-align: justify;
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #ccc;
+    margin: 10px 0 20px;
+  }
+  
+  /* Grid for the word guesses */
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+  }
+  
+  .tile {
+    background: #555;
+    border: 2px solid #444;
+    position: relative;
+    padding-top: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .tile span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+  }
+  
+  /* Input area styling */
+  .input-area {
+    text-align: center;
+  }
+  
+  .input-area input {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 70%;
+    border: 2px solid #333;
+    border-radius: 4px;
+  }
+  
+  .input-area button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 15px;
+  }
+  
+  /* Tile feedback colors */
+  .correct {
+    background-color: #6aaa64; /* green */
+    border-color: #6aaa64;
+    color: #fff;
+  }
+  
+  .present {
+    background-color: #c9b458; /* yellow */
+    border-color: #c9b458;
+    color: #fff;
+  }
+  
+  .absent {
+    background-color: #787c7e; /* gray */
+    border-color: #787c7e;
+    color: #fff;
+  }
+  
