@@ -1,81 +1,81 @@
-// The safe's password is "exonerate" (9 letters)
-const answer = "exonerate";
-const maxGuesses = 6;
-let guessCount = 0;
+// ----------------------
+// Step 1: Book Search
+// ----------------------
+const correctBook = "book2"; // Define which book is correct
+const bookElements = document.querySelectorAll('.book');
+const bookMessage = document.getElementById('book-message');
 
-const grid = document.getElementById('grid');
-const guessInput = document.getElementById('guessInput');
-const messageDiv = document.getElementById('message');
-
-// Create the empty grid for guesses
-function initGrid() {
-  grid.innerHTML = '';
-  for (let i = 0; i < maxGuesses; i++) {
-    const row = document.createElement('div');
-    row.classList.add('row');
-    for (let j = 0; j < answer.length; j++) {
-      const tile = document.createElement('div');
-      tile.classList.add('tile');
-      tile.setAttribute('id', 'tile-' + i + '-' + j);
-      const span = document.createElement('span');
-      span.textContent = '';
-      tile.appendChild(span);
-      row.appendChild(tile);
+bookElements.forEach(book => {
+  book.addEventListener('click', () => {
+    const selectedBook = book.getAttribute('data-book');
+    if (selectedBook === correctBook) {
+      bookMessage.textContent = "You found the right book!";
+      // Transition to the letter puzzle step after a brief pause
+      setTimeout(() => {
+        document.getElementById('book-search').style.display = "none";
+        document.getElementById('letter-puzzle').style.display = "block";
+        initLetterPuzzle();
+      }, 1000);
+    } else {
+      bookMessage.textContent = "This book holds no secrets. Try another.";
     }
-    grid.appendChild(row);
-  }
-}
+  });
+});
 
-// Compare the guess to the answer and return color-coded statuses
-function evaluateGuess(guess) {
-  const answerArr = answer.split('');
-  const guessArr = guess.split('');
-  const result = Array(answer.length).fill('absent');
+// -------------------------
+// Step 2: Letter Puzzle
+// -------------------------
+const targetPassword = "exonerate"; // Target word (9 letters)
+let currentCombination = "";
+const letterInput = document.getElementById('letterInput');
+const letterMessage = document.getElementById('letter-message');
 
-  // First pass: mark correct letters
-  for (let i = 0; i < answer.length; i++) {
-    if (guessArr[i] === answerArr[i]) {
-      result[i] = 'correct';
-      answerArr[i] = null; // Avoid duplicate matching
-    }
-  }
+function initLetterPuzzle() {
+  // The text extracted from the book; for this demo, we include the target word.
+  const text = "The password lies in these letters: exonerate";
+  const bookTextElement = document.getElementById('book-text');
+  bookTextElement.innerHTML = "";
   
-  // Second pass: mark letters that are present but misplaced
-  for (let i = 0; i < answer.length; i++) {
-    if (result[i] !== 'correct' && answerArr.includes(guessArr[i])) {
-      result[i] = 'present';
-      answerArr[answerArr.indexOf(guessArr[i])] = null;
+  // Split the text into individual characters and create clickable spans for letters
+  for (let char of text) {
+    const span = document.createElement('span');
+    span.textContent = char;
+    if (/[a-zA-Z]/.test(char)) {
+      span.classList.add('letter');
+      span.addEventListener('click', () => {
+        // Append the letter (in lowercase) to the combination
+        currentCombination += char.toLowerCase();
+        letterInput.value = currentCombination;
+        checkCombination();
+      });
+    }
+    bookTextElement.appendChild(span);
+  }
+}
+
+function checkCombination() {
+  // When the combination length reaches the target, evaluate it
+  if (currentCombination.length === targetPassword.length) {
+    if (currentCombination === targetPassword) {
+      letterMessage.textContent = "Success! The safe is unlocked and the evidence is destroyed.";
+      disableLetterClicks();
+    } else {
+      letterMessage.textContent = "Incorrect combination. Try again.";
     }
   }
-  return result;
 }
 
-// Process the player's guess
-function submitGuess() {
-  const guess = guessInput.value.toLowerCase();
-  if (guess.length !== answer.length) {
-    messageDiv.textContent = "Enter a " + answer.length + "-letter word.";
-    return;
-  }
-  if (guessCount >= maxGuesses) return;
-
-  const evaluation = evaluateGuess(guess);
-  for (let i = 0; i < answer.length; i++) {
-    const tile = document.getElementById('tile-' + guessCount + '-' + i);
-    tile.querySelector('span').textContent = guess[i];
-    tile.classList.add(evaluation[i]);
-  }
-  guessCount++;
-  guessInput.value = "";
-  messageDiv.textContent = "";
-  
-  if (guess === answer) {
-    messageDiv.textContent = "Success! The safe is unlocked. Destroy the evidence and bury your past.";
-    guessInput.disabled = true;
-  } else if (guessCount === maxGuesses) {
-    messageDiv.textContent = "Game over! The safe remains locked. The evidence of your crimes endures.";
-    guessInput.disabled = true;
-  }
+function disableLetterClicks() {
+  // Disable further clicking on the letter spans
+  const letterSpans = document.querySelectorAll('.letter');
+  letterSpans.forEach(span => {
+    span.style.pointerEvents = "none";
+  });
 }
 
-initGrid();
+function resetCombination() {
+  // Reset the current combination and clear the input field/message
+  currentCombination = "";
+  letterInput.value = "";
+  letterMessage.textContent = "";
+}
